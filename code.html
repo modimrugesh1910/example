@@ -1,0 +1,33 @@
+<label>
+  Number of Customers:  
+  <input value='{{name1}}'>
+</label>
+<br>
+<label>
+  Average Transaction Value(in L):
+  <input value='{{name2}}'>
+</label>
+<br>
+<label>
+  Visit per month:
+  <input value='{{name3}}'>
+</label>
+<br>
+<label>
+  Number of Stores:
+  <input value='{{name4}}'>
+</label>
+
+<p id="result"></p>
+<script>
+  const e = 0.7;
+  const f = 0.2;
+  const g = 0.2;
+  const h = 1;
+  
+  var res = {{name1}}*e*f*{{name2}}*(1-g)*h*{{name4}};
+  document.getElementById("result").innerHTML = res;
+  ractive.toHTML(res.toString()); 
+</script>
+
+<p> For {{name1}} customers, your ROI will be L {{res}}{{name1*07*name2*0.2*0.8*name4*1}}. </p>
